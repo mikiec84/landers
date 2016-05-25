@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sample Webpage</title>
+    <!--link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/spacelab/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <style>
+
+div.bhoechie-tab-container{
+  z-index: 10;
+  background: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group {
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a {
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child {
+  border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child {
+  border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active .fa,
+div.bhoechie-tab-menu div.list-group>a.active h4 {
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active {
+    opacity: 1;
+    background-image: -webkit-linear-gradient(#6d94bf, #446e9b 50%, #3e648d);
+    background-image: linear-gradient(#6d94bf, #446e9b 50%, #3e648d);
+    background-repeat: no-repeat;
+    filter: none;
+    border: 1px solid #345578;
+}
+
+
+
+
+div.bhoechie-tab-menu div.list-group>a.active:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;
+    border-left: 0;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #446e9b;
+}
+
+div.bhoechie-tab-content{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
+    display: none;
+}
+
+/* Image styles */
+img {
+    width: 100%;
+}
+
+/* Bootstrap */
+.list-group-item {
+    background-color: #E8E8E8;
+    border: 1px solid #CBC9C9;
+    opacity: 0.5;
+}
+    </style>
+  </head>
+  <body>
+
+<div class="container">
+	<div class="row">
+        <div class="col-xs-12 bhoechie-tab-container">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active text-center">
+                  <h4>Product 1</h4>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4>Product 2</h4>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4>Product 3</h4>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4>Product 4</h4>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4>Product 5</h4>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4>Product 6</h4>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-10 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                <div class="bhoechie-tab-content active">
+                    <h1 class="text-center">Product 1</h1>
+                    <img src="public_domain/image01.jpg"/>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <h1 class="text-center">Product 2</h1>
+                    <img src="public_domain/image02.jpg"/>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <h1 class="text-center">Product 3</h1>
+                    <img src="public_domain/image03.jpg"/>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <h1 class="text-center">Product 4</h1>
+                    <img src="public_domain/image04.jpg"/>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <h1>Product 5</h1>
+                    <img src="public_domain/image05.jpg"/>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <h1>Product 6</h1>
+                    <img src="public_domain/image06.jpg"/>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script>
+$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+    </script>
+  </body>
+</html>

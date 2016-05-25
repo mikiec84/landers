@@ -1,0 +1,238 @@
+<!doctype html>
+<!--
+Community first design places social elements ahead of webpage navigation elements.
+Many websites have social links at the bottom of the page because social media was
+introduced as a later element to web design.
+
+"The future of the web is a conversation."
+
+Goals for this web page.
+- Promote social elements
+- Demonstrate a website as a conversation
+-->
+<html>
+  <head>
+    <title>Sample Webpage</title>
+    <!--link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/spacelab/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <style>
+      body {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      .logo {
+        width: 100%;
+        height: 140px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: auto;
+      }
+
+      .top-padded {
+        margin-top: 100px;
+      }
+
+      .social-icon .fa {
+        margin-top: 45px;
+      }
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+ opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+ 
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+ 
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+}
+ 
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+ 
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+ opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+ 
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+ 
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+}
+ 
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+ 
+.fade-in.two {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+ 
+.fade-in.three {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <nav class="row">
+        <div class="col-xs-2 text-center social-icon fade-in two">
+          <i class="visible-lg fa fa-twitter fa-5x"></i>
+          <i class="visible-md fa fa-twitter fa-4x"></i>
+          <i class="visible-sm fa fa-twitter fa-3x"></i>
+          <i class="visible-xs fa fa-twitter fa-2x"></i>
+        </div>
+        <div class="col-xs-2 text-center social-icon fade-in one">
+          <i class="visible-lg fa fa-facebook fa-5x"></i>
+          <i class="visible-md fa fa-facebook fa-4x"></i>
+          <i class="visible-sm fa fa-facebook fa-3x"></i>
+          <i class="visible-xs fa fa-facebook fa-2x"></i>
+        </div>
+        <div class="col-xs-4 text-center social-icon">
+          <div class="logo">
+            <img src="http://placehold.it/300x150&text=[Logo%20Placeholder]"/>
+          </div>
+        </div>
+        <div class="col-xs-2 text-center social-icon fade-in one">
+          <i class="visible-lg fa fa-youtube fa-5x"></i>
+          <i class="visible-md fa fa-youtube fa-4x"></i>
+          <i class="visible-sm fa fa-youtube fa-3x"></i>
+          <i class="visible-xs fa fa-youtube fa-2x"></i>
+        </div>
+        <div class="col-xs-2 text-center social-icon fade-in two">
+          <i class="visible-lg fa fa-google-plus fa-5x"></i>
+          <i class="visible-md fa fa-google-plus fa-4x"></i>
+          <i class="visible-sm fa fa-google-plus fa-3x"></i>
+          <i class="visible-xs fa fa-google-plus fa-2x"></i>
+        </div>
+      </nav>
+
+      <div class="row top-padded">
+        <div class="col-xs-12">
+          <h1 class="text-center">We provide solutions for your needs.</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <hr/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <div class="input-group">
+            <input type="text" class="form-control input-lg" placeholder="What can we do for you?">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-lg btn-default">Begin</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <hr/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <button type="button" class="btn btn-lg btn-block btn-primary">
+            Browse Products and Services
+            <i class="fa fa-angle-double-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+        </div>
+      </div>
+
+    <div class="row">
+		<div class="col-xs-12">
+            <hr/>
+			<div class="col-xs-2">
+				<ul class="list-unstyled">
+					<li><b>Compan</b>y<li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Contact us</a></li>						
+				</ul>
+			</div>
+			<div class="col-xs-2">
+				<ul class="list-unstyled">
+					<li><b>Applications</b><li>
+					<li><a href="#">Product for Windows</a></li>
+					<li><a href="#">Product mobile apps</a></li>							
+				</ul>
+			</div>
+			<div class="col-xs-2">
+				<ul class="list-unstyled">
+					<li><b>Services</b><li>
+					<li><a href="#">Code snippets</a></li>
+					<li><a href="#">Training</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-2">
+				<ul class="list-unstyled">
+					<li><b>Documentation</b><li>
+					<li><a href="#">Product Support</a></li>
+					<li><a href="#">Product Pages</a></li>		
+					<li><a href="#">Plans & pricing</a></li>					
+				</ul>
+			</div>
+			<div class="col-xs-4">
+			    <p class="text-muted text-center">&copy; 2013 Company Name. All rights reserved</p>
+                <p class="text-center">
+			        <a href="#">Terms of Service</a> |
+			        <a href="#">Privacy</a> |
+			        <a href="#">Security</a>
+                </p>
+            </div>
+		</div>
+	</div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
